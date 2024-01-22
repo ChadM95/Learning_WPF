@@ -8,69 +8,74 @@ namespace BlackJack
     {
         static void Main(string[] args)
         {
-            //setup for objects
-            string name = "";
-            int score = 0;
+            //setup
+            string playerChoice = "y", stickTwist = "";
 
-
+            //create player and dealer objects
+            Player p1 = new Player("Player 1", 0);
+            Player Dealer = new Player("Dealer", 0);
 
             //loop to control gameplay
-            string playerChoice = "y";
-        
+
             while (playerChoice == "y")
             {        
                 //game title
                 Console.WriteLine("\n--- LETS PLAY BLACKJACK !!! ---");
                 Console.WriteLine();
 
-                //get players name
-                Console.Write("Enter Name >> ");
-                name = Console.ReadLine();
-
-                //create player object
-                Player p1 = new Player(name,score);
-
-                //create dealer player object
-                Player dealer = new Player("Dealer",score);
-
-
-
-                //game here
-                Random rng = new Random();
-
-                p1.Score = rng.Next(0,10);
-                Console.WriteLine("{0}'s score is {1}", p1.Name , p1.Score);
-
-                dealer.Score = rng.Next(0, 10);
-                Console.WriteLine("{0}'s score is {1}", dealer.Name, dealer.Score);
-
-                p1.Score += rng.Next(0, 10);
-                Console.WriteLine("{0}'s score is {1}", p1.Name, p1.Score);
-
-                dealer.Score += rng.Next(0, 10);
-                Console.WriteLine("{0}'s score is {1}", dealer.Name, dealer.Score);
-
-                //find and display winner
-                if (p1.Score > dealer.Score)
-                    Console.WriteLine("The winner is {0}", p1.Name);
-                else if (dealer.Score > p1.Score)
-                    Console.WriteLine("The winner is {0}", dealer.Name);
-                else Console.WriteLine("Its a draw boyo");
-
-                //ask to play again
-                Console.Write("Do you want to play again: y/n >> ");
-                playerChoice = Console.ReadLine();
+                //reset scores if repeating
+                p1.Score = 0;
+                Dealer.Score = 0;
                 
-            } //end of loop
+                //create new Deck object to use DealCard() method
+                Deck Deck = new Deck();
 
-            Console.WriteLine("\n--- GAME OVER ---");
+                //player 1 plays
+
+                    //deal 2 cards using Deck.DealCard() method
+                    for (int i = 0; i < 2; i++)
+                    {
+                        p1.Score += Deck.DealCard(p1.Score);
+                    }
+
+                    //display player 1 score
+                    Console.WriteLine("Player 1 score : {0}", p1.Score);
+
+                    //ask to stick or twist
+                    Console.Write("Do you want to stick or twist : s/t >> ");
+                    stickTwist = Console.ReadLine();
+
+                    if(stickTwist == "t")  
+                        while (stickTwist == "t" || p1.Score > 21)
+                        {
+                            p1.Score += Deck.DealCard(p1.Score);
+                         Console.WriteLine("Player 1 score : {0}", p1.Score);
+                            Console.Write("Do you want to stick or twist : s/t >> ");
+                            stickTwist = Console.ReadLine();
+                        }
+                
+                
+                //dealer plays
+
+                
+
+                if (p1.Score > 21)
+                    Console.WriteLine(p1.Name + " BUST!!");
+
+                //calculate and display winner
+                
+
+                Console.Write("Do you want to play again: y/n ? >> ");
+                playerChoice = Console.ReadLine();
+
+            } //end of gameplay loop
+
+            Console.WriteLine("\n--- Have a Nice Day! ---");
             Console.ReadLine(); //pause
 
         }  //end of main method
 
-        //methods
-
-
+        
     } //end of program class
 
 } //end of namespace
