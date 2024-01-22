@@ -16,14 +16,13 @@ namespace BlackJack
             Player Dealer = new Player("Dealer", 0);
 
             //loop to control gameplay
-
             while (playerChoice == "y")
             {        
                 //game title
                 Console.WriteLine("\n--- LETS PLAY BLACKJACK !!! ---");
                 Console.WriteLine();
 
-                //reset scores if repeating
+                //reset scores if game is on repeat
                 p1.Score = 0;
                 Dealer.Score = 0;
                 
@@ -31,9 +30,10 @@ namespace BlackJack
                 Deck Deck = new Deck();
 
                 //player 1 plays
+                Console.WriteLine("____ {0}'s Turn ____",p1.Name);
 
-                    //deal 2 cards using Deck.DealCard() method
-                    for (int i = 0; i < 2; i++)
+                //deal first 2 cards using Deck.DealCard() method
+                for (int i = 0; i < 2; i++)
                     {
                         p1.Score += Deck.DealCard(p1.Score);
                     }
@@ -45,12 +45,13 @@ namespace BlackJack
                     Console.Write("Do you want to stick or twist : s/t >> ");
                     stickTwist = Console.ReadLine();
 
-                    if(stickTwist == "t")  
+                    if (stickTwist == "t") { 
                         while (stickTwist != "s")
                         {
                         //deal card
                             p1.Score += Deck.DealCard(p1.Score);
                          Console.WriteLine("Player 1 score : {0}", p1.Score);
+
                         //check if score is higher than 21 
                         if (p1.Score > 21)
                             break;
@@ -58,18 +59,39 @@ namespace BlackJack
                         Console.Write("Do you want to stick or twist : s/t >> ");
                             stickTwist = Console.ReadLine();
                         }
-                
-                
-                //dealer plays
+                }
 
-                
+                //dealer plays only if player 1 is still in the game
+                if (p1.Score <= 21)
+                {
 
+                    Console.WriteLine("\n____ {0}'s Turn ____", Dealer.Name);
+
+                    //deal first two cards
+                    for (int i = 0; i < 2; i++)
+                    {
+                        Dealer.Score += Deck.DealCard(Dealer.Score);
+                    }
+
+                    Console.WriteLine("Dealers Score : {0}", Dealer.Score);
+
+                    if (Dealer.Score < 17)
+                        while (Dealer.Score < 17)
+                        {
+                            Dealer.Score += Deck.DealCard(Dealer.Score);
+                            Console.WriteLine("Dealers Score : {0}", Dealer.Score);
+                        }
+
+                }
+
+                //display player 1 bust 
                 if (p1.Score > 21)
                     Console.WriteLine(p1.Name + " BUST!!");
 
                 //calculate and display winner
-                
+                GetWinner(p1.Score, Dealer.Score);
 
+                Console.WriteLine("--- GAME OVER ---");
                 Console.Write("Do you want to play again: y/n ? >> ");
                 playerChoice = Console.ReadLine();
 
@@ -80,7 +102,15 @@ namespace BlackJack
 
         }  //end of main method
 
-        
+        public static void GetWinner(int p1Score, int dealerScore)
+        { 
+            if (p1Score > dealerScore && p1Score <=21)
+                Console.WriteLine("Player 1 Wins!!!"); 
+
+            else if (dealerScore > p1Score && dealerScore <=21)
+                Console.WriteLine("Dealer Wins!!!");
+        }
+
     } //end of program class
 
 } //end of namespace
