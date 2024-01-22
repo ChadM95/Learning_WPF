@@ -46,7 +46,7 @@ namespace BlackJack
                     stickTwist = Console.ReadLine();
 
                     if(stickTwist == "t")  
-                        while (stickTwist == "t" || p1.Score > 21)
+                        while (stickTwist != "s" || p1.Score < 21)
                         {
                             p1.Score += Deck.DealCard(p1.Score);
                          Console.WriteLine("Player 1 score : {0}", p1.Score);
