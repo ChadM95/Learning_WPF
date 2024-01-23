@@ -41,6 +41,9 @@ namespace BlackJack
                     //display player 1 score
                     Console.WriteLine("Player 1 score : {0}", p1.Score);
 
+                //ends game short if player 1 is bust
+                if (p1.Score <= 21) { 
+
                     //ask to stick or twist
                     Console.Write("Do you want to stick or twist : s/t >> ");
                     stickTwist = Console.ReadLine();
@@ -56,9 +59,10 @@ namespace BlackJack
                         if (p1.Score > 21)
                             break;
                         //ask again
-                        Console.Write("Do you want to stick or twist : s/t >> ");
+                        Console.Write("\nDo you want to stick or twist : s/t >> ");
                             stickTwist = Console.ReadLine();
                         }
+                    }
                 }
 
                 //dealer plays only if player 1 is still in the game
@@ -73,7 +77,7 @@ namespace BlackJack
                         Dealer.Score += Deck.DealCard(Dealer.Score);
                     }
 
-                    Console.WriteLine("Dealers Score : {0}", Dealer.Score);
+                    Console.WriteLine("Dealers Score : {0}\n", Dealer.Score);
 
                     if (Dealer.Score < 17)
                         while (Dealer.Score < 17)
@@ -84,14 +88,16 @@ namespace BlackJack
 
                 }
 
-                //display player 1 bust 
+                //display player bust if 
                 if (p1.Score > 21)
                     Console.WriteLine(p1.Name + " BUST!!");
+                else if (Dealer.Score > 21)
+                    Console.WriteLine(Dealer.Name + " BUST!!");
 
                 //calculate and display winner
                 GetWinner(p1.Score, Dealer.Score);
 
-                Console.WriteLine("--- GAME OVER ---");
+                Console.WriteLine("\n--- GAME OVER ---");
                 Console.Write("Do you want to play again: y/n ? >> ");
                 playerChoice = Console.ReadLine();
 
@@ -105,10 +111,13 @@ namespace BlackJack
         public static void GetWinner(int p1Score, int dealerScore)
         { 
             if (p1Score > dealerScore && p1Score <=21)
-                Console.WriteLine("Player 1 Wins!!!"); 
+                Console.WriteLine("\nPlayer 1 Wins!!!"); 
 
             else if (dealerScore > p1Score && dealerScore <=21)
-                Console.WriteLine("Dealer Wins!!!");
+                Console.WriteLine("\nDealer Wins!!!");
+            
+            else if (p1Score == dealerScore && p1Score <= 21 && dealerScore <= 21 )
+                Console.WriteLine("\nIts a draw!!!");
         }
 
     } //end of program class

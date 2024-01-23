@@ -12,7 +12,10 @@ public class Deck
         Rank = new string[] {"2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"};
 
     }
-    public int DealCard(int score)
+            
+        //method to control card dealing - outputs an int value
+        
+        public int DealCard(int score)
     {
         Random r1 = new Random();
 
@@ -60,12 +63,17 @@ public class Deck
             case 12:
                 value = 11;
                 break;       
+            }
+            
+            //controls Ace value
+            if (value == 11 && (score + value) > 21)
+                value = 1;
+
+
+            Console.WriteLine($"Card dealt is the {Rank[index2]} of {Suit[index1]}, value {value}");
+
+            return value;
         }
-
-        Console.WriteLine($"Card dealt is the {Rank[index2]} of {Suit[index1]}, value {value}");
-
-        return value;
-    }
 
 
 
