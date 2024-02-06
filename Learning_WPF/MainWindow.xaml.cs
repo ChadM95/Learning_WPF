@@ -38,7 +38,7 @@ namespace Learning_WPF
                 tbToggle.Text = "Running...";
                 btn.Content = "Stop";
             }
-#
+
             //flips boolean
             running = !running;
         }
