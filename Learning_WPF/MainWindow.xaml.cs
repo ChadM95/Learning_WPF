@@ -21,26 +21,7 @@ namespace Learning_WPF
             InitializeComponent();
         }
 
-        bool running = false;
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if (running)
-            {
-                //stop
-                tbToggle.Text = "Stopped";
-                btn.Content = "Run";
-            }
-
-            else
-            {
-                //run
-                tbToggle.Text = "Running...";
-                btn.Content = "Stop";
-            }
-
-            //flips boolean
-            running = !running;
+      
         }
     }
 }
