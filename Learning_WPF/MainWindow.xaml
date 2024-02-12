@@ -19,6 +19,18 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <Button Grid.Column="0" Grid.Row="0" Content="Button 1"/>
+        <Button Grid.Column="1" Grid.Row="0" Content="Button 2"/>
+        <Button Grid.Column="2" Grid.Row="0" Content="Button 3"/>
+
+        <Button Grid.Column="0" Grid.Row="1" Content="Button 4"/>
+        <Button Grid.Column="1" Grid.Row="1" Content="Button 5"/>
+        <Button Grid.Column="2" Grid.Row="1" Content="Button 6"/>
+
+        <Button Grid.Column="0" Grid.Row="2" Content="Button 7"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="Button 8"/>
+        <Button Grid.Column="2" Grid.Row="2" Content="Button 9"/>
         
     </Grid>
 </Window>
