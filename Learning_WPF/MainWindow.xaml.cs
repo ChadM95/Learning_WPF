@@ -23,25 +23,6 @@ namespace Learning_WPF
             InitializeComponent();
         }
 
-        private void btn1_Click(object sender, RoutedEventArgs e)
-        {
-
-            if (running) 
-            {
-                tb1.Text = "Program Stopped!";
-                btn1.Content = "Run";
-                running = false;
-            }
-
-            else
-            {
-                tb1.Text = "Program running...";
-                btn1.Content = "stop";
-                running = true;
-            }
-            
-        }
-
        
     }
 }
