@@ -6,29 +6,7 @@
         xmlns:local="clr-namespace:Learning_WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <Button Grid.Column="0" Grid.Row="0" Content="Button 1" Grid.ColumnSpan="2" Width="75" Height="40"/>
-        <Button Grid.Column="2" Grid.Row="0" Content="Button 3" Width="75" Height="40"/>
-
-        <Button Grid.Column="0" Grid.Row="1" Content="Button 4" Width="75" Height="40"/>
-        <Button Grid.Column="1" Grid.Row="1" Content="Button 5" Width="75" Height="40"/>
-        <Button Grid.Column="2" Grid.Row="1" Content="Button 6" Grid.RowSpan="2" Width="75" Height="40"/>
-
-        <Button Grid.Column="0" Grid.Row="2" Content="Button 7" Width="75" Height="40"/>
-        <Button Grid.Column="1" Grid.Row="2" Content="Button 8" Width="75" Height="40"/>
-
-    </Grid>
+    
+    
+    
 </Window>
