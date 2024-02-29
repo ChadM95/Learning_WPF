@@ -23,6 +23,18 @@ namespace Learning_WPF
             InitializeComponent();
         }
 
-       
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            //generate a random number
+            int diceRoll;
+            Random random = new Random();
+
+            diceRoll = random.Next(0, 7);
+
+
+            //display in textbox
+            tb1.Text = diceRoll.ToString();
+
+        }
     }
 }
