@@ -16,6 +16,8 @@ namespace Learning_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool running = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -23,7 +25,23 @@ namespace Learning_WPF
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            tb1.Text = "You clicked the button!";
+
+            if (running) 
+            {
+                tb1.Text = "Program Stopped!";
+                btn1.Content = "Run";
+                running = false;
+            }
+
+            else
+            {
+                tb1.Text = "Program running...";
+                btn1.Content = "stop";
+                running = true;
+            }
+            
         }
+
+       
     }
 }

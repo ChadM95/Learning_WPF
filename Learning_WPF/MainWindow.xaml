@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBlock Name="tb1" Text="" Width="200" Height="100" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Button Name="btn1" Content="BUTTON" Width="200" Height="100"
+        <Button Name="btn1" Content="Run" Width="200" Height="100"
                 Click="btn1_Click"/>
     </Grid>
 </Window>
