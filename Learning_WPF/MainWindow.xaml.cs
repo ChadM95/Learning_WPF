@@ -21,7 +21,9 @@ namespace Learning_WPF
             InitializeComponent();
         }
 
-      
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            tb1.Text = "You clicked the button!";
         }
     }
 }
