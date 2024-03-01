@@ -7,9 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <RadioButton Content="Bigger" Name="rbBig" GroupName="Size"/>
-        <RadioButton Content="Smaller" Name="rbSmall" GroupName="Size" HorizontalAlignment="Center"/>
-        <Button Name="btn1" Content="Button" Click="btn1_Click" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Width="80" Height="40"/>
+        
     </Grid>
     
 </Window>
