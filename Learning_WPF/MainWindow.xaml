@@ -6,20 +6,6 @@
         xmlns:local="clr-namespace:Learning_WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Name="btnStart" Content="Start Game" Click="btnStart_Click"  FontSize="15" HorizontalAlignment="Left" Margin="110,70,0,0" VerticalAlignment="Top" Height="40" Width="80"/>
-        <Button Name="btnGuess" Content="Guess" Click="btnGuess_Click" FontSize="15" HorizontalAlignment="Left" Margin="110,290,0,0" VerticalAlignment="Top" Height="40" Width="80"/>
-        
-        <TextBlock HorizontalAlignment="Left" Margin="249,82,0,0" TextWrapping="Wrap" Text="First Number :" VerticalAlignment="Top"/>
-        <TextBlock Name="answer1" HorizontalAlignment="Left" Margin="338,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="249,302,0,0" TextWrapping="Wrap" Text="Second Number :" VerticalAlignment="Top"/>
-        <TextBlock Name="answer2" HorizontalAlignment="Left" Margin="356,303,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        
-        <RadioButton Name="rbBigger" Content="Bigger" HorizontalAlignment="Left" Margin="150,198,0,0" VerticalAlignment="Top"/>
-        <RadioButton Name="rbSmaller" Content="Smaller" HorizontalAlignment="Left" Margin="363,198,0,0" VerticalAlignment="Top"/>
-
-
-
-    </Grid>
+   
 
 </Window>
