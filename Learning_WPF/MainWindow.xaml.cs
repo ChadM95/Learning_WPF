@@ -16,6 +16,17 @@ namespace Learning_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-       
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            bool biggerSelected = rbBig.IsChecked.Equals(true);
+            bool smallerSelected = rbSmall.IsChecked.Equals(true);
+
+            if (biggerSelected)
+                MessageBox.Show("You selected bigger");
+
+            else
+                MessageBox.Show("You selected smaller");
+
+        }
     }
 }
