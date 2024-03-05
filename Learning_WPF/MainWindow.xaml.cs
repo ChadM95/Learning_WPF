@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Reflection;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,13 +13,17 @@ using System.Windows.Shapes;
 
 namespace Learning_WPF
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
+        
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //populate combo box
+            cbx1.ItemsSource = new string[] { "Full", "Off Peak", "Student", "OAP" };
 
+
+        }
     }
 
 }
-    
