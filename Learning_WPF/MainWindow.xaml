@@ -6,43 +6,10 @@
         xmlns:local="clr-namespace:Learning_WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-
-    <DockPanel>
-        <!-- Header -->
-        <TextBlock DockPanel.Dock="Top" Text="My Application" HorizontalAlignment="Center"/>
-
-        <!-- Left -->
-        <StackPanel DockPanel.Dock="Left" Background="LightGray">
-            <Button Content="Button" Margin="5"/>
-            <Button Content="Button" Margin="5"/>
-            <Button Content="Button" Margin="5"/>
-            <Button Content="Button" Margin="5"/>
-        </StackPanel>
-
-        <!-- Footer -->
-        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Center">
-            <TextBlock Text="ABC inc" Margin="5"/>
-            <TextBlock Text="Tel: 053 123 4567" Margin="5"/>
-            <TextBlock Text="abc@123.com" Margin="5"/>
-        </StackPanel>
-
-        <!-- Main Body -->
-        <Grid Background="LightBlue" ShowGridLines="True">
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-
-        </Grid>
-
-    </DockPanel>
+    <Grid>
+        
+        
+    </Grid>
+    
 
 </Window>
