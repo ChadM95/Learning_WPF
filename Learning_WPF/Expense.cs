@@ -25,7 +25,7 @@ namespace Learning_WPF
 
         public override string ToString()
         {
-            return $"{Category} {Cost:C} {DateIncurred}";
+            return $"{Category} {Cost:C} {DateIncurred.ToShortDateString()}";
         }
     }
 }
