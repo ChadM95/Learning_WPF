@@ -8,10 +8,7 @@
         Title="MainWindow" Height="450" Width="800"
         Loaded="Window_Loaded"
         WindowStartupLocation="CenterScreen">
-    <Grid>
-        <ListBox Name="lbx1" Margin="25"/>
-        <Button Name="btn1" Click="btn1_Click" Content="ADD" Width="80" Height="20" Margin="15" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-    </Grid>
+    
     
 
 </Window>
