@@ -26,6 +26,7 @@ namespace Learning_WPF
 
             //populate listbox with collection
             lbxMembers.ItemsSource = members;
+
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -49,6 +50,17 @@ namespace Learning_WPF
 
             //add to collection
             members.Add(m1);
+
+            //display number of members
+            int noOfMembers = 0;
+
+            foreach (Member m in members)
+            {
+                noOfMembers++;
+            }
+
+
+            tblkNoOfMembers.Text = Convert.ToString(noOfMembers);
         }
 
 
