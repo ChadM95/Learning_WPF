@@ -16,14 +16,14 @@
         <Label Content="Filter" HorizontalAlignment="Left" Margin="449,45,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cbxFilter" HorizontalAlignment="Left" Margin="513,47,0,0" VerticalAlignment="Top" Width="120"/>
         
-        <ListBox  Margin="91,94,96,134"/>
+        <ListBox x:Name="lbxExpenses" Margin="91,94,96,134"/>
         
         <Label Content="Total Expenses" HorizontalAlignment="Left" Margin="124,314,0,0" VerticalAlignment="Top"/>
         <TextBlock Name="tblkTotal" HorizontalAlignment="Left" Margin="232,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="143,383,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button x:Name="btnAdd" Click="btnAdd_Click" Content="Add" HorizontalAlignment="Left" Margin="143,383,0,0" VerticalAlignment="Top" Width="35"/>
         <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Margin="266,383,0,0" VerticalAlignment="Top" Width="56"/>
-        <Button Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="418,383,0,0" VerticalAlignment="Top" Width="41"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="418,383,0,0" VerticalAlignment="Top" Width="41"/>
         <Button x:Name="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="553,383,0,0" VerticalAlignment="Top" Width="43"/>
 
     </Grid>

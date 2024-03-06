@@ -16,10 +16,52 @@ namespace Learning_WPF
 
     public partial class MainWindow : Window
     {
-      
+        //expenses collection
+        ObservableCollection<Expense> expenses = new ObservableCollection<Expense>();
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //listbox contents = expenses collection
+            lbxExpenses.ItemsSource = expenses;
 
+        }
 
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            //add new random expense
+            string category;
+            decimal amount;
+            DateTime Date;
+
+            //new random object
+            Random rand = new Random();
+
+            //category
+            string[] categories = new string[] {"Travel","Office","Entertainment"};
+
+            int i = rand.Next(0,3);
+            category = categories[i];
+
+            //amount
+            amount = rand.Next(0,101);
+
+            //date
+            int year, month, day;
+
+            year = rand.Next(2020,2024);
+            month = rand.Next(1,12);
+            day = rand.Next(1,31);
+
+            Date = new DateTime(year,month,day);
+
+            //create object
+            Expense e1 = new Expense(category,amount,Date);
+
+            //add to collection
+            expenses.Add(e1);
+        }
+
+       
     }
 
 }
