@@ -19,6 +19,9 @@ namespace Learning_WPF
         //expenses collection
         ObservableCollection<Expense> expenses = new ObservableCollection<Expense>();
 
+        //search matches collection
+        ObservableCollection<Expense> matchingExpenses = new ObservableCollection<Expense>();
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //listbox contents = expenses collection
@@ -61,7 +64,40 @@ namespace Learning_WPF
             expenses.Add(e1);
         }
 
-       
+        //searches expenses by category
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            //read from screen
+            string searchTerm = tbxSearch.Text;
+
+            //clear collection
+            matchingExpenses.Clear();
+            
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                //search collection for matches
+
+                foreach (var exp in expenses)
+                {
+                    string expenseType = exp.Category;
+
+                    if (expenseType.Equals(searchTerm))
+                    {
+                        matchingExpenses.Add(exp);
+                    }
+                }
+
+                //display matches on screen
+                lbxExpenses.ItemsSource = matchingExpenses;
+            }
+
+
+
+
+
+
+
+        }
     }
 
 }
