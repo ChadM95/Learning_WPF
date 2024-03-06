@@ -15,12 +15,18 @@ namespace Learning_WPF
         public DateTime DateJoined { get; set; }
 
         //ctor
-        public Member() { }
+        public Member( string name, string type, DateTime dateJoined) 
+        {
+            Name = name;
+            Type = type;
+            DateJoined = dateJoined;
+        }
 
         //toString mathod
         public override string ToString()
         {
-            return $"{Name} - {Type} - {DateJoined.ToShortDateString()}";
+            return $"{Name}, {Type}, {DateJoined.ToShortDateString()}";
         }
+
     }
 }

@@ -34,10 +34,12 @@
             <ComboBox x:Name="cbx1" Grid.Row="1" Grid.Column="1" Width="120" Height="20"/>
 
             <Label Grid.Row="2" Content="Name" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-            <TextBox Grid.Row="2" Grid.Column="1" Width="120" Height="20"/>
+            <TextBox x:Name="tbxName" Grid.Row="2" Grid.Column="1" Width="120" Height="20"/>
 
             <Label Grid.Row="3" Content="Date Joined" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
             <DatePicker Grid.Row="3" Grid.Column="1" Width="120" Height="20"/>
+
+            <Button x:Name="btnAdd" Click="btnAdd_Click" Content="add" Grid.Row="4" Grid.Column="1" Height="20" Width="60"/>
 
             <Label Grid.Row="5" Content="Number of Members" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
             <TextBlock Grid.Row="5" Grid.Column="1"/>
