@@ -91,11 +91,11 @@ namespace Learning_WPF
                 lbxExpenses.ItemsSource = matchingExpenses;
             }
 
+        }
 
-
-
-
-
+        private void btnShowAll_Click(object sender, RoutedEventArgs e)
+        {
+            lbxExpenses.ItemsSource = expenses;
 
         }
     }
