@@ -19,7 +19,7 @@ namespace Learning_WPF
     public partial class MainWindow : Window
     {
         //expenses collection
-        ObservableCollection<Expense> expenses = new ObservableCollection<Expense>();
+        public ObservableCollection<Expense> expenses = new ObservableCollection<Expense>();
 
         //search matches collection
         ObservableCollection<Expense> matchingExpenses = new ObservableCollection<Expense>();
@@ -39,7 +39,12 @@ namespace Learning_WPF
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            
+            AddExpenseWindow addExp = new AddExpenseWindow();
+            addExp.ShowDialog();
+
+            //give reference to new window
+            addExp.Owner = this;
+
         }
 
         //searches expenses by category

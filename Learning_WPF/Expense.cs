@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Learning_WPF
 {
-    internal class Expense
+    public class Expense
     {
         public string Category { get; set; }
         public decimal Amount { get; set; }

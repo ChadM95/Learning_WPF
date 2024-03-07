@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\auser\Documents\Chad\Repos\Learning_WPF\Learning_WPF\Learning_WPF\App.xaml
-11407045341
+2-1227816652
 
-7942204440
+8-879613710
 199-996877
-MainWindow.xaml;
+AddExpenseWindow.xaml;MainWindow.xaml;
 
-False
+True
 
