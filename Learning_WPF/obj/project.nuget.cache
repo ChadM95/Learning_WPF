@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "JeFjzIV9LytyZH175t/nDqxpKvsUR25qvByG8EvNlNcuPwSqdlcQNzpRYHZFyRAZhqDuM5+X2QjPwQefb8HLWA==",
+  "dgSpecHash": "TO5orcH26U+mGZMMrnj3udO5X9dRleSzl8KRUsAKPOmBpmv6TYllrW2PFR/B7IPLgm0pYzDC8255U5cERn1HAg==",
   "success": true,
   "projectFilePath": "C:\\Users\\auser\\Documents\\Chad\\Repos\\Learning_WPF\\Learning_WPF\\Learning_WPF\\Learning_WPF.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\auser\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
