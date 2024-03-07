@@ -39,35 +39,7 @@ namespace Learning_WPF
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            //add new random expense
-            string category;
-            decimal amount;
-            DateTime Date;
-
-            //new random object
-            Random rand = new Random();
-
-            //category
-            int i = rand.Next(0,3);
-            category = categories[i];
-
-            //amount
-            amount = rand.Next(0,101);
-
-            //date
-            int year, month, day;
-
-            year = rand.Next(2020,2024);
-            month = rand.Next(1,12);
-            day = rand.Next(1,31);
-
-            Date = new DateTime(year,month,day);
-
-            //create object
-            Expense e1 = new Expense(category,amount,Date);
-
-            //add to collection
-            expenses.Add(e1);
+            
         }
 
         //searches expenses by category
