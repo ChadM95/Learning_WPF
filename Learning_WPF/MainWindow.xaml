@@ -14,7 +14,7 @@
         <Button x:Name="btnSearch" Click="btnSearch_Click" Content=">" HorizontalAlignment="Left" Margin="309,49,0,0" VerticalAlignment="Top" Width="26"/>
 
         <Label Content="Filter" HorizontalAlignment="Left" Margin="449,45,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbxFilter" HorizontalAlignment="Left" Margin="513,47,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbxFilter" SelectionChanged="cbxFilter_SelectionChanged" HorizontalAlignment="Left" Margin="513,47,0,0" VerticalAlignment="Top" Width="120"/>
         
         <ListBox x:Name="lbxExpenses" Margin="91,94,96,134"/>
         

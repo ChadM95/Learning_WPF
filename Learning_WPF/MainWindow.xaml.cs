@@ -22,11 +22,17 @@ namespace Learning_WPF
         //search matches collection
         ObservableCollection<Expense> matchingExpenses = new ObservableCollection<Expense>();
 
+        //Categories string array
+        string[] categories = new string[] { "Travel", "Office", "Entertainment" };
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //listbox contents = expenses collection
             lbxExpenses.ItemsSource = expenses;
 
+
+            //populate combo box
+            cbxFilter.ItemsSource = categories;
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -40,8 +46,6 @@ namespace Learning_WPF
             Random rand = new Random();
 
             //category
-            string[] categories = new string[] {"Travel","Office","Entertainment"};
-
             int i = rand.Next(0,3);
             category = categories[i];
 
@@ -93,9 +97,39 @@ namespace Learning_WPF
 
         }
 
+        //reverts listbox back to showing all items
         private void btnShowAll_Click(object sender, RoutedEventArgs e)
         {
             lbxExpenses.ItemsSource = expenses;
+
+        }
+
+        //filters list
+        private void cbxFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //determine what the user selected
+            string selectedItem = cbxFilter.SelectedItem as string;
+
+            if (selectedItem != null)
+            {
+                //clear previous search results collection
+                matchingExpenses.Clear();
+
+                //search collection for matches
+                foreach (var exp in expenses)
+                {
+                    string expCategory = exp.Category;
+
+                    if (expCategory == selectedItem)
+                    {
+                        //add matches to new collection
+                        matchingExpenses.Add(exp);
+                    }
+                }
+
+                //update display
+                lbxExpenses.ItemsSource = matchingExpenses;
+            }
 
         }
     }
