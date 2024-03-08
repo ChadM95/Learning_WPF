@@ -37,13 +37,17 @@ namespace Learning_WPF
             cbxFilter.ItemsSource = categories;
         }
 
+        //opens new window to add expense object
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+            //create new window object reference
             AddExpenseWindow addExp = new AddExpenseWindow();
-            addExp.ShowDialog();
 
             //give reference to new window
             addExp.Owner = this;
+
+            //display new window
+            addExp.ShowDialog();
 
         }
 
@@ -143,6 +147,11 @@ namespace Learning_WPF
 
             }
 
+        }
+
+        private void btnRemove_Click(object sender, RoutedEventArgs e)
+        {
+            expenses.Clear();
         }
     }
 

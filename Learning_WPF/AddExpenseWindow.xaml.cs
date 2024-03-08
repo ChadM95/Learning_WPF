@@ -39,15 +39,23 @@ namespace Learning_WPF
             DateTime date = datePicker.SelectedDate.Value;
 
             //create new object
-            Expense e1 = new Expense(type,amt,date);
+            Expense newExp = new Expense(type,amt,date);
 
             //reference main window
             MainWindow main = Owner as MainWindow;
 
             //add to collection
-            main.expenses.Add(e1);
+            main.expenses.Add(newExp);
+
+            //close window
+            this.Close();
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+            cbxType.ItemsSource = new string[] {"Travel","Office","Entertainment"} ;
 
+        }
     }
 }

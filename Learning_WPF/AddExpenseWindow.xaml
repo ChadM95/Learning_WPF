@@ -5,14 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Learning_WPF"
         mc:Ignorable="d"
-        Title="AddExpenseWindow" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Title="AddExpenseWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
     <Grid>
         <Label Content="Expense Type" HorizontalAlignment="Left" Margin="251,79,0,0" VerticalAlignment="Top"/>
         <Label Content="Amount" HorizontalAlignment="Left" Margin="262,166,0,0" VerticalAlignment="Top"/>
         <Label Content="Date" HorizontalAlignment="Left" Margin="262,261,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnAddExp" Click="btnAddExp_Click" Content="Add" HorizontalAlignment="Left" Margin="146,361,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnCancel" Click="btnCancel_Click" Content="Cancel" HorizontalAlignment="Left" Margin="491,361,0,0" VerticalAlignment="Top"/>
-        
+        <Button x:Name="btnAddExp" Click="btnAddExp_Click" Content="Add" HorizontalAlignment="Left" Margin="146,361,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button x:Name="btnCancel" Click="btnCancel_Click" Content="Cancel" HorizontalAlignment="Left" Margin="466,361,0,0" VerticalAlignment="Top" Width="64"/>
+
         <TextBox x:Name="tbxAmt" HorizontalAlignment="Left" Margin="451,170,0,0" TextWrapping="Wrap" Text="Tx" VerticalAlignment="Top" Width="120"/>
         <DatePicker Name="datePicker" HorizontalAlignment="Left" Margin="451,274,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cbxType" HorizontalAlignment="Left" Margin="451,81,0,0" VerticalAlignment="Top" Width="120"/>
