@@ -43,5 +43,11 @@ namespace Learning_WPF
             //close this window
             this.Close();
         }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace Learning_WPF
     {
         //create collection
         public ObservableCollection<Book> books = new ObservableCollection<Book>();
-
+        ObservableCollection<Book> matchingBooks = new ObservableCollection<Book>();
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             lbxBooks.ItemsSource = books;
@@ -41,6 +41,32 @@ namespace Learning_WPF
             //open new window
             addBookWindow.ShowDialog();
 
+        }
+
+        //searches by title
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            //read search term
+            string searchTerm = tbxSearch.Text;
+
+            if (searchTerm != null)
+            {
+                //clear previous search results
+                matchingBooks.Clear();
+
+                //run through collection
+                foreach (var book in books)
+                { 
+                    if(searchTerm == book.Title)
+
+                    //add matches to new collection
+                    matchingBooks.Add(book);
+
+                    //display matches
+                    lbxBooks.ItemsSource = matchingBooks;
+                
+                }
+            }
         }
     }
 

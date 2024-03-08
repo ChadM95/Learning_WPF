@@ -27,7 +27,7 @@
             <TextBox x:Name="tbxGenre" Width="70" Height="25" Margin="15" />
         </StackPanel>
 
-        <Button Grid.Column="1" x:Name="Cancel" Content="Cancel" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="50" FontSize="15" Margin="20"/>
+        <Button Click="Cancel_Click" Grid.Column="1" x:Name="Cancel" Content="Cancel" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="50" FontSize="15" Margin="20"/>
         
     </Grid>
 </Window>
