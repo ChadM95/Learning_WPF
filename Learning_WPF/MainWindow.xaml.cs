@@ -68,6 +68,11 @@ namespace Learning_WPF
                 }
             }
         }
+
+        private void btnShowAll_Click(object sender, RoutedEventArgs e)
+        {
+            lbxBooks.ItemsSource = books;
+        }
     }
 
 }

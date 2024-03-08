@@ -38,6 +38,7 @@
             <Button x:Name="btnDelete" Content="Delete" Margin="20" Width="50" Height="25"/>
             <Button x:Name="btnSave" Content="Save" Margin="20" Width="50" Height="25"/>
             <Button x:Name="btnLoad" Content="Load" Margin="20" Width="50" Height="25"/>
+            <Button x:Name="btnShowAll" Content="Show All" Click="btnShowAll_Click" Margin="20" Width="50" Height="25"/>
         </StackPanel>
     </Grid>
 
