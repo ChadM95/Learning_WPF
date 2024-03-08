@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\auser\Documents\Chad\Repos\Learning_WPF\Learning_WPF\Learning_WPF\App.xaml
-11407045341
+2-9003026
 
-619231828
+72026984436
 199-996877
-MainWindow.xaml;
+AddBookWindow.xaml;MainWindow.xaml;
 
-False
+True
 

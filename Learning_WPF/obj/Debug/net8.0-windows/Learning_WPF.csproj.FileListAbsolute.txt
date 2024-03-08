@@ -43,5 +43,3 @@ C:\Users\auser\Documents\Chad\Repos\Learning_WPF\Learning_WPF\Learning_WPF\obj\D
 C:\Users\auser\Documents\Chad\Repos\Learning_WPF\Learning_WPF\Learning_WPF\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\auser\Documents\Chad\Repos\Learning_WPF\Learning_WPF\Learning_WPF\obj\Debug\net8.0-windows\Learning_WPF.csproj.AssemblyReference.cache
 C:\Users\auser\Documents\Chad\Repos\Learning_WPF\Learning_WPF\Learning_WPF\obj\Debug\net8.0-windows\Learning_WPF.csproj.CopyComplete
-C:\Users\auser\Documents\Chad\Repos\Learning_WPF\Learning_WPF\Learning_WPF\obj\Debug\net8.0-windows\AddExpenseWindow.g.cs
-C:\Users\auser\Documents\Chad\Repos\Learning_WPF\Learning_WPF\Learning_WPF\obj\Debug\net8.0-windows\AddExpenseWindow.baml

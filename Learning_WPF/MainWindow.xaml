@@ -8,7 +8,40 @@
         Title="MainWindow" Height="450" Width="800"
         WindowStartupLocation="CenterScreen">
     <Grid>
-   
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        
+        
+        <TextBlock Text="Books Application" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Content="Search by Title" VerticalAlignment="Center"/>
+            <TextBox Width="100" Height="25"/>
+            <Button Content="Search" Margin="20" Width="50" Height="25"/>
+
+            <TextBlock Width="50"/>
+
+            <Label Content="Filter by Genre" VerticalAlignment="Center"/>
+            <ComboBox Margin="10" Width="50" Height="25"/>
+        </StackPanel>
+        
+        <ListBox Grid.Row="2" x:Name="lbxBooks" Width="600" Margin="5"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+
+            <Button x:Name="btnAdd" Content="Add" Margin="20" Width="50" Height="25"/>
+
+            <Button x:Name="btnDelete" Content="Delete" Margin="20" Width="50" Height="25"/>
+
+            <Button x:Name="btnSave" Content="Save" Margin="20" Width="50" Height="25"/>
+
+            <Button x:Name="btnLoad" Content="Load" Margin="20" Width="50" Height="25"/>
+
+        </StackPanel>
     </Grid>
 
 
