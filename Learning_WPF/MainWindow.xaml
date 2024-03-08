@@ -6,27 +6,9 @@
         xmlns:local="clr-namespace:Learning_WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        Loaded="Window_Loaded"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Search" HorizontalAlignment="Left" Margin="91,47,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Margin="172,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnSearch" Click="btnSearch_Click" Content=">" HorizontalAlignment="Left" Margin="309,49,0,0" VerticalAlignment="Top" Width="26"/>
-
-        <Label Content="Filter" HorizontalAlignment="Left" Margin="449,45,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbxFilter" SelectionChanged="cbxFilter_SelectionChanged" HorizontalAlignment="Left" Margin="513,47,0,0" VerticalAlignment="Top" Width="120"/>
-        
-        <ListBox x:Name="lbxExpenses" Margin="91,94,96,134"/>
-        
-        <Label Content="Total Expenses" HorizontalAlignment="Left" Margin="124,314,0,0" VerticalAlignment="Top"/>
-        <TextBlock Name="tblkTotal" HorizontalAlignment="Left" Margin="232,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        
-        <Button x:Name="btnAdd" Click="btnAdd_Click" Content="Add" HorizontalAlignment="Left" Margin="143,383,0,0" VerticalAlignment="Top" Width="35"/>
-        <Button x:Name="btnRemove" Click="btnRemove_Click" Content="Remove" HorizontalAlignment="Left" Margin="266,383,0,0" VerticalAlignment="Top" Width="56"/>
-        <Button x:Name="btnSave" Click="btnSave_Click" Content="Save" HorizontalAlignment="Left" Margin="418,383,0,0" VerticalAlignment="Top" Width="41"/>
-        <Button x:Name="btnLoad" Click="btnLoad_Click" Content="Load" HorizontalAlignment="Left" Margin="553,383,0,0" VerticalAlignment="Top" Width="43"/>
-        <Button x:Name="btnShowAll" Click="btnShowAll_Click" Content="Show All" HorizontalAlignment="Left" Margin="550,317,0,0" VerticalAlignment="Top"/>
-
+   
     </Grid>
 
 
