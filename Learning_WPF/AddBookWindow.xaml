@@ -20,7 +20,7 @@
             <Label Content="Genre" FontSize="15" Margin="15"/>
         </StackPanel>
 
-        <Button x:Name="addBook" Content="Add" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="50" FontSize="15" Margin="20"/>
+        <Button x:Name="addBook" Click="addBook_Click" Content="Add" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="50" FontSize="15" Margin="20"/>
         
         <StackPanel Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
             <TextBox x:Name="tbxTitle" Width="70" Height="25" Margin="15"/>

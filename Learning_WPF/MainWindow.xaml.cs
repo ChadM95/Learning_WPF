@@ -17,8 +17,31 @@ namespace Learning_WPF
 {
 
     public partial class MainWindow : Window
-    { 
-    
+    {
+        //create collection
+        public ObservableCollection<Book> books = new ObservableCollection<Book>();
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            lbxBooks.ItemsSource = books;
+
+            cbxFilter.ItemsSource = new string[] { "Fiction", "Non Fiction"};
+
+        }
+        
+        //open new window to add new book
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            //create new window reference
+            AddBookWindow addBookWindow = new AddBookWindow();
+
+            //set owner of new window
+            addBookWindow.Owner = this;
+
+            //open new window
+            addBookWindow.ShowDialog();
+
+        }
     }
 
 }

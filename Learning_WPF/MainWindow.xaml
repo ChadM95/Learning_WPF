@@ -6,41 +6,38 @@
         xmlns:local="clr-namespace:Learning_WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
-            <RowDefinition Height="15*"/>
-            <RowDefinition Height="60*"/>
-            <RowDefinition Height="15*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="17*"/>
         </Grid.RowDefinitions>
         
-        
+        <!--Title-->
         <TextBlock Text="Books Application" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
+        <!--Search and Filter-->
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <Label Content="Search by Title" VerticalAlignment="Center"/>
-            <TextBox Width="100" Height="25"/>
-            <Button Content="Search" Margin="20" Width="50" Height="25"/>
-
-            <TextBlock Width="50"/>
-
+            <TextBox x:Name="tbxSearch" Width="100" Height="25"/>
+            <Button x:Name="btnSearch" Content="Search" Margin="20" Width="50" Height="25"/>
+<!--Spacer--> <TextBlock Width="50"/> 
             <Label Content="Filter by Genre" VerticalAlignment="Center"/>
-            <ComboBox Margin="10" Width="50" Height="25"/>
+            <ComboBox x:Name="cbxFilter" Margin="10" Width="100" Height="25"/>
         </StackPanel>
         
+        <!--ListBox-->
         <ListBox Grid.Row="2" x:Name="lbxBooks" Width="600" Margin="5"/>
 
+        <!--Buttons bottom row-->
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
-
-            <Button x:Name="btnAdd" Content="Add" Margin="20" Width="50" Height="25"/>
-
+            <Button x:Name="btnAdd" Click="btnAdd_Click" Content="Add" Margin="20" Width="50" Height="25"/>
             <Button x:Name="btnDelete" Content="Delete" Margin="20" Width="50" Height="25"/>
-
             <Button x:Name="btnSave" Content="Save" Margin="20" Width="50" Height="25"/>
-
             <Button x:Name="btnLoad" Content="Load" Margin="20" Width="50" Height="25"/>
-
         </StackPanel>
     </Grid>
 
