@@ -23,10 +23,10 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <Label Content="Search by Title" VerticalAlignment="Center"/>
             <TextBox x:Name="tbxSearch" Width="100" Height="25"/>
-            <Button Click="btnSearch_Click" x:Name="btnSearch" Content="Search" Margin="20" Width="50" Height="25"/>
+            <Button Click="btnSearch_Click" x:Name="btnSearch" Content="Search" Margin="20" Width="60" Height="25"/>
 <!--Spacer--> <TextBlock Width="50"/> 
             <Label Content="Filter by Genre" VerticalAlignment="Center"/>
-            <ComboBox x:Name="cbxFilter" Margin="10" Width="100" Height="25"/>
+            <ComboBox x:Name="cbxFilter" SelectionChanged="cbxFilter_SelectionChanged" Margin="10" Width="100" Height="25"/>
         </StackPanel>
         
         <!--ListBox-->
@@ -34,11 +34,11 @@
 
         <!--Buttons bottom row-->
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:Name="btnAdd" Click="btnAdd_Click" Content="Add" Margin="20" Width="50" Height="25"/>
-            <Button x:Name="btnDelete" Content="Delete" Margin="20" Width="50" Height="25"/>
-            <Button x:Name="btnSave" Content="Save" Margin="20" Width="50" Height="25"/>
-            <Button x:Name="btnLoad" Content="Load" Margin="20" Width="50" Height="25"/>
-            <Button x:Name="btnShowAll" Content="Show All" Click="btnShowAll_Click" Margin="20" Width="50" Height="25"/>
+            <Button x:Name="btnAdd" Click="btnAdd_Click" Content="Add" Margin="20" Width="60" Height="25"/>
+            <Button x:Name="btnDelete" Content="Delete" Margin="20" Width="60" Height="25"/>
+            <Button x:Name="btnSave" Content="Save" Margin="20" Width="60" Height="25"/>
+            <Button x:Name="btnLoad" Content="Load" Margin="20" Width="60" Height="25"/>
+            <Button x:Name="btnShowAll" Content="Show All" Click="btnShowAll_Click" Margin="20" Width="60" Height="25"/>
         </StackPanel>
     </Grid>
 

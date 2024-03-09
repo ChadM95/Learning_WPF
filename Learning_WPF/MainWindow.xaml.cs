@@ -73,6 +73,32 @@ namespace Learning_WPF
         {
             lbxBooks.ItemsSource = books;
         }
+
+        private void cbxFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //read selection
+            string filterTerm = cbxFilter.SelectedValue.ToString();
+
+            if (filterTerm != null)
+            {
+                //clear previous search results
+                matchingBooks.Clear();
+
+                foreach (var book in books)
+                {
+                    //compare to collection
+                    if (filterTerm == book.Genre)
+                    {
+                        //add matches to new collection
+                        matchingBooks.Add(book);
+                    }
+                }
+                //change listbox display
+                lbxBooks.ItemsSource = matchingBooks;
+            }
+
+
+        }
     }
 
 }
