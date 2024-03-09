@@ -20,7 +20,7 @@ namespace Learning_WPF
 
         public override string ToString()
         {
-            return $"Title: {Title} , Genre: {Genre}";
+            return $"{Title} , {Genre}";
         }
     }
 }

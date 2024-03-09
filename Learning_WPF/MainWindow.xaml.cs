@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace Learning_WPF
 {
@@ -97,6 +98,44 @@ namespace Learning_WPF
                 lbxBooks.ItemsSource = matchingBooks;
             }
 
+
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            books.Clear();
+
+        }
+        
+        //saves to JSON File
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            //get json formatted objects
+            string json = JsonConvert.SerializeObject(books, Formatting.Indented);
+
+            //write to file
+            using (StreamWriter sw = new StreamWriter(@"c:\temp\books.json"))
+            {
+                sw.Write(json);
+            }
+        }
+
+        //Loads JSON File
+        private void btnLoad_Click(object sender, RoutedEventArgs e)
+        {
+
+            //read from file
+            using (StreamReader sr = new StreamReader(@"c:\temp\books.json"))
+            {
+                string json = sr.ReadToEnd();
+            
+
+            //get objects from JSON
+            books = JsonConvert.DeserializeObject<ObservableCollection<Book>>(json);
+            
+            }
+
+            lbxBooks.ItemsSource = books;
 
         }
     }
