@@ -97,8 +97,6 @@ namespace Learning_WPF
                 //change listbox display
                 lbxBooks.ItemsSource = matchingBooks;
             }
-
-
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
